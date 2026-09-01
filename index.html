@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 AI Cover Letter Generator</h1>
+            <p>Fill in the details and generate a professional cover letter</p>
+        </header>
+
+        <form id="coverForm">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="e.g. John Doe" required />
+            </div>
+
+            <div class="form-group">
+                <label for="jobRole">Job Role *</label>
+                <input type="text" id="jobRole" placeholder="e.g. Frontend Developer" required />
+            </div>
+
+            <div class="form-group">
+                <label for="company">Target Company *</label>
+                <input type="text" id="company" placeholder="e.g. Google" required />
+            </div>
+
+            <div class="form-group">
+                <label for="skills">Key Skills *</label>
+                <input type="text" id="skills" placeholder="e.g. React, Node.js, TypeScript" required />
+            </div>
+
+            <div class="form-group">
+                <label for="resumeUpload">Upload Resume (PDF) <span class="optional">(Optional)</span></label>
+                <input type="file" id="resumeUpload" accept=".pdf" />
+                <small class="hint">Upload a PDF to personalize the cover letter further</small>
+            </div>
+
+            <div class="form-group">
+                <label for="tone">Tone</label>
+                <select id="tone">
+                    <option value="professional">Professional</option>
+                    <option value="enthusiastic">Enthusiastic</option>
+                    <option value="formal">Formal</option>
+                    <option value="confident">Confident</option>
+                </select>
+            </div>
+
+            <button type="submit" id="generateBtn">
+                <span id="btnText">✨ Generate Cover Letter</span>
+                <span id="btnLoader" class="hidden">⏳ Generating...</span>
+            </button>
+        </form>
+
+        <div id="outputSection" class="hidden">
+            <div class="output-header">
+                <h2>Your Cover Letter</h2>
+                <button id="copyBtn">📋 Copy to Clipboard</button>
+            </div>
+            <div id="coverLetter" class="cover-letter"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

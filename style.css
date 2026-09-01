@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 720px;
+    width: 100%;
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a2639;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #6b7a8f;
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1a2639;
+    margin-bottom: 5px;
+}
+
+.form-group .optional {
+    font-weight: 400;
+    color: #8a9aa8;
+    font-size: 13px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #dce3ec;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fafcff;
+    color: #1a2639;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2a7de1;
+    box-shadow: 0 0 0 4px rgba(42, 125, 225, 0.12);
+    background: #ffffff;
+}
+
+.form-group .hint {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #8a9aa8;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #1a2639;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-family: inherit;
+    margin-top: 6px;
+}
+
+button[type="submit"]:hover {
+    background: #2a3a55;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#btnLoader {
+    display: inline-block;
+}
+
+#btnText.hidden {
+    display: none;
+}
+
+#outputSection {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 2px solid #eef2f6;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.output-header h2 {
+    font-size: 18px;
+    color: #1a2639;
+}
+
+#copyBtn {
+    padding: 8px 18px;
+    background: #eef2f6;
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a2639;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+#copyBtn:hover {
+    background: #dce3ec;
+}
+
+.cover-letter {
+    background: #f8fafc;
+    padding: 24px 28px;
+    border-radius: 16px;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #1a2639;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 120px;
+    border: 1px solid #eef2f6;
+}
+
+.cover-letter p {
+    margin-bottom: 14px;
+}
+
+.cover-letter p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 24px 18px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .output-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #copyBtn {
+        width: 100%;
+        text-align: center;
+    }
+}
