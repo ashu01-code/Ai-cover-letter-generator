@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cover Letter Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Cover Letter Generator</h1>
+            <p>Professional cover letters powered by AI</p>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <form id="coverLetterForm">
+                    <div class="form-group">
+                        <label for="candidateName">Candidate Name</label>
+                        <input type="text" id="candidateName" name="candidateName" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobRole">Job Role</label>
+                        <input type="text" id="jobRole" name="jobRole" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="targetCompany">Target Company</label>
+                        <input type="text" id="targetCompany" name="targetCompany" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keySkills">Key Skills</label>
+                        <textarea id="keySkills" name="keySkills" rows="3" placeholder="e.g., JavaScript, React, Node.js, Python, AWS" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resumeUpload">Upload Resume (PDF)</label>
+                        <div class="dropzone" id="dropzone">
+                            <p>Drag & drop your PDF here or click to browse</p>
+                            <input type="file" id="resumeUpload" accept=".pdf" />
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="generateBtn">Generate Cover Letter</button>
+                        <button type="button" id="clearBtn">Clear All</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="output-section">
+                <div class="output-header">
+                    <h2>Generated Cover Letter</h2>
+                    <button id="copyBtn" disabled>Copy to Clipboard</button>
+                </div>
+                <div id="outputContainer">
+                    <div class="placeholder">
+                        <p>Your generated cover letter will appear here</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AI Cover Letter Generator. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
